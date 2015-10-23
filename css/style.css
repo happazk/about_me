@@ -1,0 +1,234 @@
+/*CSS Reset*/
+html,body,h1,h2,h3,h4,h5,h6,div,ul,ol,li,p{margin:0;padding:0;}
+ul, ol { list-style-type: none;}
+body{font-size: 12px;}
+
+/* public css layout
+	* --------------------------------------- */
+	.clearfix:after{
+			content:".";
+			display: block;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+		}
+
+.section{
+	padding-top: 40px;
+}
+
+
+/* public module
+	* --------------------------------------- */
+/*渐变样式*/
+.gradient{	
+	background: -webkit-linear-gradient(#FFFFFF, #f8f8f8);
+	background: -o-linear-gradient(#FFFFFF, #f8f8f8);
+	background: -ms-linear-gradient(#FFFFFF, #f8f8f8);
+	background: linear-gradient(#FFFFFF, #f8f8f8);
+	/*-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#FFFFFF,endColorstr=#f8f8f8)";/*兼容IE9*/
+	+background:#F9F9F9;/*兼容IE*/*/
+}
+
+/* cricle module
+	* --------------------------------------- */
+.cricle{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border: 4px solid #fff;
+	border-radius: 54px;
+}
+.cricle .img{
+	display: block;
+	border-radius: 54px;
+	height: 100%;
+	background: red;
+	overflow: hidden;
+}
+.cricle .text{
+	position: absolute;
+	top: calc(-50%);/*参照为.cricle,指定位置*/
+	left: calc(20%);
+	color: #fff;
+	border: 1px solid #f8f8f8;
+}
+.cricle .arrows_down{
+	position: absolute;
+	bottom: -10px;/*参照为.text 定位*/
+	left: calc(30%)
+}
+
+.arrows_down{
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border-left: 10px solid transparent;
+	border-top: 10px solid #fff;
+	border-right: 10px solid transparent;
+}
+.arrows_up{
+	width: 0;
+	height: 0;
+	display: inline-block;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	border-right: 10px solid transparent;
+}
+
+
+
+/* Fixed header
+	* --------------------------------------- */
+	#header{
+		position:fixed;
+		top:0px;
+		left: 0px;
+		height: 40px;
+		display:block;
+		width: 100%;
+		background: rgba(60,60,60,.8);
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		/*padding: 20px 0 0 0;*/
+	}
+/*  header layout
+	* --------------------------------------- */
+	#header ul{
+		position: relative;
+		height: 40px;
+		line-height: 40px;
+		overflow: hidden;
+	}
+	#header li{
+		float: left;
+		width: 25%;
+	}
+	#header li a{
+		font-size: 24px;
+		text-decoration: none;
+		color: #000;
+	}
+	#header li a:hover{
+		color: #fff;
+	}
+
+	#header .photo{
+		margin: 0 auto;
+		margin-top: -20px;
+		background: #333;
+		z-index: 10;
+	}
+	#header .photo a{}
+	#header .photo img{
+		display: block;
+		box-shadow: 3px 5px 5px #000;
+	}
+
+	/*  about_me layout
+	* --------------------------------------- */
+	.about_me {
+		text-align: center;
+		background: #ccc;
+	}
+	.about_me h2{
+		z-index: 20;
+	}
+	.about_me h3{
+		/*margin-left: 10000px;*/
+	}
+
+/*  production layout
+	* --------------------------------------- */
+	.production{
+		position: relative;
+		background: rgba(255,238,34,1);
+	}
+	.production .cricle{
+		width: 134px;
+		height: 134px;
+	}
+	.production ul{
+	
+	}
+	.production li a{
+		display: block;
+	}
+	.production li{
+		position: absolute;
+	}
+	
+	.production .one_pro .text,
+	.production .two_pro .text,
+	.production .three_pro .text{
+		background: rgba(0,0,0,1);
+		border: 2px solid #fff;
+		border-radius: 5px;
+	}
+	
+
+
+	.production .one_pro{
+		top: 60%;
+		left: 30%;
+	}
+	.production .two_pro{
+		top:60%;
+		left: 50%
+	}
+	.production .three_pro{
+		top: 60%;
+		left: 70%;
+	}
+	.production a{}
+	.production img{}
+
+	.production .practice{}
+
+
+/*  skill layout
+	* --------------------------------------- */
+	.skill{
+		/*vertical-align: middle;*/
+		text-align: center;
+		background: rgba(34,34,34,1);
+	}
+	.skill ul{
+		position: relative;
+		width: 50%;
+		margin: 0 auto;
+	}
+	.skill li{
+		
+		height: 18px;
+		line-height: 18px;
+		text-align: left;
+		padding-left: 234px;
+	}
+	.skill li span,
+	.skill h2{
+		color: rgb(249,237,236);
+		font-weight: bold;
+	}
+
+
+
+/*  call_card layout
+	* --------------------------------------- */
+	
+	.call_card{
+		background: rgba(250,176,5, .3);
+	}
+
+	.call_card h2{
+		text-align: center;
+	}
+
+	.call_card ul{}
+	.call_card li{
+		text-align: center;
+		height: 24px;
+		line-height: 24px;
+		font-weight: bold;
+	}
